@@ -36,6 +36,8 @@ RUN apt install -y openjdk-16-jdk-headless
 
 WORKDIR /minecraft
 
+VOLUME /minecraft
+
 #accept eula
 RUN echo eula=true > eula.txt
 
