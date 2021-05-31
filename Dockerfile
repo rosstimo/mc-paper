@@ -43,16 +43,16 @@ RUN echo eula=true > eula.txt
 ADD https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/750/downloads/paper-1.16.5-750.jar ./
 
 #add plugins
-ADD https://github.com/EssentialsX/Essentials/releases/download/2.18.2/EssentialsX-2.18.2.0.jar ./plugins/
-ADD https://dev.bukkit.org/projects/worldedit/files/3283695/download ./plugins/
-ADD https://dev.bukkit.org/projects/craftbook/files/3144903/download ./plugins/
-ADD https://dev.bukkit.org/projects/worldguard/files/3066271/download ./plugins/
-ADD https://dev.bukkit.org/projects/multiverse-core/files/3074594/download ./plugins/
-ADD https://dev.bukkit.org/projects/multiverse-portals/files/3113114/download ./plugins/
-ADD https://dev.bukkit.org/projects/minepacks/files/3285694/download ./plugins/
-ADD https://dev.bukkit.org/projects/timber-plugin/files/3023799/download ./plugins/
-ADD https://dev.bukkit.org/projects/fastleafdecay/files/2861213/download ./plugins/
-ADD https://dev.bukkit.org/projects/dynmap/files/3242277/download ./plugins/
+# ADD https://github.com/EssentialsX/Essentials/releases/download/2.18.2/EssentialsX-2.18.2.0.jar ./plugins/
+# ADD https://dev.bukkit.org/projects/worldedit/files/3283695/download ./plugins/
+# ADD https://dev.bukkit.org/projects/craftbook/files/3144903/download ./plugins/
+# ADD https://dev.bukkit.org/projects/worldguard/files/3066271/download ./plugins/
+# ADD https://dev.bukkit.org/projects/multiverse-core/files/3074594/download ./plugins/
+# ADD https://dev.bukkit.org/projects/multiverse-portals/files/3113114/download ./plugins/
+# ADD https://dev.bukkit.org/projects/minepacks/files/3285694/download ./plugins/
+# ADD https://dev.bukkit.org/projects/timber-plugin/files/3023799/download ./plugins/
+# ADD https://dev.bukkit.org/projects/fastleafdecay/files/2861213/download ./plugins/
+# ADD https://dev.bukkit.org/projects/dynmap/files/3242277/download ./plugins/
 
 # Expose server port 25565 mc server, 8123 for Dynamap plugin
 EXPOSE 25565 8123
