@@ -1,0 +1,6 @@
+version: 1
+command-items:
+    death-items: {}
+wireless-ic-states: !!set {}
+teleport-ic-locations:
+    list: !!set {}
