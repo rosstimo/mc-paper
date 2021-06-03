@@ -1,0 +1,16 @@
++ **.yml
++ **.json
++ **.txt
++ **.db
++ **.schem
++ **.properties
+
+- **.jpg
+- **.mca
+- **.jar
+- logs/
+- cache/
+- world*
+- plugins/dynmap/*
+- plugins/WorldEdit/.archive-unpack*
+- plugins/WorldEdit/sessions/
