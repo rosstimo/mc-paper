@@ -11,15 +11,8 @@ sets:
         areas: {
             }
         label: Markers
-        markers:
-            marker_1:
-                world: world
-                markup: false
-                x: 628.0
-                icon: default
-                y: 12.0
-                z: 1079.0
-                label: cool_ocean_ravine
+        markers: {
+            }
         lines: {
             }
         layerprio: 0
