@@ -22,10 +22,13 @@ RUN apt -y update && \
 # as of mc version 1.17.xx java 17 will be required here
 # cron & rsync setup nightly bakups
 # accept eula
-COPY start.sh backup.sh minecraft/
-COPY bkp-crontab /etc/cron.d/
 
-RUN apt install -y openjdk-jdk-headless && \
+#COPY start.sh /minecraft/
+#COPY backup.sh /minecraft/
+COPY bkp-crontab /etc/cron.d/
+COPY *.sh /minecraft/
+
+RUN apt install -y openjdk-17-jdk-headless && \
     apt install cron -y && \
     apt install rsync -y && \
     crontab /etc/cron.d/bkp-crontab && \
