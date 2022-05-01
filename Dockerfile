@@ -1,9 +1,3 @@
-#TODO:
-
-# install script for plugins
-
-# Label stuff
-# security check
 
 # currently the latest LTS version
 From ubuntu:20.04
@@ -19,12 +13,10 @@ RUN apt -y update && \
     apt -y clean
 
 # install minecraft server dependencies
-# as of mc version 1.17.xx java 17 will be required here
+# as of mc version 1.17.xx java 17 or above will be required here
 # cron & rsync setup nightly bakups
 # accept eula
 
-#COPY start.sh /minecraft/
-#COPY backup.sh /minecraft/
 COPY bkp-crontab /etc/cron.d/
 COPY *.sh /minecraft/
 
@@ -34,6 +26,13 @@ RUN apt install -y openjdk-17-jdk-headless && \
     crontab /etc/cron.d/bkp-crontab && \
     mkdir /minecraft/backups && \
     echo eula=true > /minecraft/eula.txt
+
+
+
+# Official vanilla Java edition server
+#change url here for different version
+#see https://www.minecraft.net/en-us/download/server
+#ADD https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar /minecraft/
 
 #get the mc paper server
 #change url here for different version
