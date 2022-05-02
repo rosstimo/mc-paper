@@ -1,6 +1,6 @@
 
 # currently the latest LTS version
-From ubuntu:20.04
+From ubuntu:22.04
 
 # set timezone
 ARG TZ=America/Denver #time zone
@@ -20,7 +20,7 @@ RUN apt -y update && \
 COPY bkp-crontab /etc/cron.d/
 COPY *.sh /minecraft/
 
-RUN apt install -y openjdk-17-jdk-headless && \
+RUN apt install -y openjdk-18-jdk-headless && \
     apt install cron -y && \
     apt install rsync -y && \
     crontab /etc/cron.d/bkp-crontab && \
@@ -51,4 +51,4 @@ STOPSIGNAL SIGKILL
 WORKDIR /minecraft
 
 # start minecraft server
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["/minecraft/start.sh"]
