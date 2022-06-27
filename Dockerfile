@@ -32,12 +32,12 @@ RUN apt install -y openjdk-18-jdk-headless && \
 # Official vanilla Java edition server
 #change url here for different version
 #see https://www.minecraft.net/en-us/download/server
-#ADD https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar /minecraft/
+#ADD https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar /minecraft/ #official 1.18.2
 
 #get the mc paper server
 #change url here for different version
 #see https://papermc.io/downloads 
-ADD https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/290/downloads/paper-1.18.2-290.jar /minecraft/
+ADD https://api.papermc.io/v2/projects/paper/versions/1.18.2/builds/386/downloads/paper-1.18.2-386.jar /minecraft/
 
 # Expose server port 25565 mc server, rcon port 25575, 8123 for dynmap plugin
 EXPOSE 25575 25565 8123
